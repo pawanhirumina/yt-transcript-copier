@@ -14,7 +14,7 @@ body:
   attributes:
     label: Extension Version
     description: Find it at about:addons
-    placeholder: v2.2.5
+    placeholder: v2.3.5
   validations:
     required: true
 
