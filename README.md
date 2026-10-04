@@ -52,7 +52,7 @@ Manually opening YouTube’s transcript panel, selecting all text, and copying i
 1. Clone or download the repository:  
 
    ```bash
-   git clone https://github.com/pawanhirumina/yt-transcript-yoinker.git
+   git clone https://github.com/pawanhirumina/yt-transcript-copier.git
    ```
 
 2. Open **`about:debugging#/runtime/this-firefox`** in Firefox.  
@@ -104,7 +104,7 @@ This project is licensed under the **MIT License** – see the `LICENSE` file fo
 
 ## 📬 Contact & Support
 
-- **GitHub Issues:** <https://github.com/pawanhirumina/yt-transcript-yoinker/issues>  
+- **GitHub Issues:** <https://github.com/pawanhirumina/yt-transcript-copier/issues>  
 - **Author:** [pawanhirumina](https://github.com/pawanhirumina)  
 
 Feel free to open an issue for bugs, feature requests, or general questions.
@@ -113,8 +113,8 @@ Feel free to open an issue for bugs, feature requests, or general questions.
 
 ## 🔗 Useful Links
 
-- **GitHub Repository:** <https://github.com/pawanhirumina/yt-transcript-yoinker>  
-- **Live Demo / Documentation Site:** <https://pawanhirumina.github.io/yt-transcript-yoinker/>  
+- **GitHub Repository:** <https://github.com/pawanhirumina/yt-transcript-copier>  
+- **Live Demo / Documentation Site:** <https://pawanhirumina.github.io/yt-transcript-copier/>  
 - **Mozilla Add‑Ons Page:** <https://addons.mozilla.org/en-US/firefox/addon/yt-transcript-yoinker/>  
 
 ---
