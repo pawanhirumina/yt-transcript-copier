@@ -1,4 +1,4 @@
-console.log("Transcript Yoinker Loaded : v2.3.6")
+console.log("Transcript Copier Loaded : v2.3.6")
 
 const api = typeof browser!=='undefined'?browser:chrome;
 const sleep = ms=>new Promise(r=>setTimeout(r,ms));
