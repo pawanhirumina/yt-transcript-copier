@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 Sitemap: https://pawanhirumina.github.io/yt-transcript-yoinker/sitemap.xml
-Allow: /
-Sitemap: https://pawanhirumina.github.io/yt-transcript-yoinker/privacy.html
+
