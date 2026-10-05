@@ -3,6 +3,13 @@
 
 Copy YouTube video transcripts to your system clipboard with a single click—no account, no external service required.
 
+<a href="https://www.appkade.lk/apps/youtube-transcript-copier">
+  <img src="https://www.appkade.lk/badges/available-on-appkade.svg" alt="Available on AppKade" height="52">
+</a>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/yt-transcript-yoinker/">
+  <img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="Get the Add-on for Firefox" height="52">
+</a>
+
 ---
 
 ## 📖 Overview
