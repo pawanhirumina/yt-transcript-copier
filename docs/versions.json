@@ -10,7 +10,7 @@
     "version": "v2.3.5",
     "date": "Sep 21 2026",
     "notes": "added export as srt option to the extension",
-    "firefox": "https://addons.mozilla.org/en-US/firefox/addon/yt-transcript-yoinker/",
+    "firefox": null,
     "github": "https://github.com/pawanhirumina/yt-transcript-yoinker/releases/tag/v2.3.5"
   },
   {
