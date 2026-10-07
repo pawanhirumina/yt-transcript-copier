@@ -1,17 +1,17 @@
 [
   {
+    "version": "v2.3.7",
+    "date": "Oct 7 2026",
+    "notes": "fixed minor ui error",
+    "firefox": null,
+    "github": "https://github.com/pawanhirumina/yt-transcript-yoinker/releases/tag/v2.3.7"
+  },
+  {
     "version": "v2.3.6",
     "date": "Oct 4 2026",
     "notes": "fixed minor issues",
     "firefox": "https://addons.mozilla.org/en-US/firefox/addon/yt-transcript-yoinker/",
-    "github": "https://github.com/pawanhirumina/yt-transcript-yoinker/releases/tag/v2.3.5"
-  },
-  {
-    "version": "v2.3.5",
-    "date": "Sep 21 2026",
-    "notes": "added export as srt option to the extension",
-    "firefox": null,
-    "github": "https://github.com/pawanhirumina/yt-transcript-yoinker/releases/tag/v2.3.5"
+    "github": "https://github.com/pawanhirumina/yt-transcript-yoinker/releases/tag/v2.3.6"
   },
   {
     "version": "v1.0.5",

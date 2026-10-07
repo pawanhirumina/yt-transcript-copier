@@ -1,5 +1,5 @@
 # 🎥 YouTube Transcript Copier  
-**Version:** v2.3.6  
+**Version:** v2.3.7  
 
 Copy YouTube video transcripts to your system clipboard with a single click—no account, no external service required.
 
