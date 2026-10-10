@@ -30,9 +30,9 @@ This is the single source of truth for design. Any AI or human editing this site
   --btn-bg: #f90130;    /* youtube red */
 }
 ```
-- **YouTube Red:** `#f90130` - use only for `.youtube` highlight or primary CTAs if needed.
+- **YouTube Red:** `#f90130` - use only for highlight or primary CTAs if needed.
 - **Green dot:** `#2ECC71` - for "live/available" status.
-- **Firefox Gradient:** `linear-gradient(165deg, #fca632, #f3294e)` - ONLY for .btn-firefox
+- **Firefox Gradient:** `linear-gradient(165deg, #fca632, #f3294e)` - ONLY for .btn-firefox, or firefox related things
 
 Never introduce new bright colors. Stick to grayscale + red gradient.
 
@@ -141,7 +141,7 @@ CTA Layout:
 - Footer flex-direction column align flex-start
 
 ## Forbidden / Do NOT
-- Do NOT add light backgrounds, shadows, or colorful gradients (except firefox button)
+- Do NOT add light backgrounds, shadows, borders, or colorful gradients (except firefox button)
 - Do NOT use pure black borders (#000) - use var(--border) #232323
 - Do NOT use large font sizes for body copy >16px
 - Do NOT center everything - only hero is centered
