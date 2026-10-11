@@ -1,4 +1,4 @@
-console.log("Transcript Copier Loaded : v2.3.7")
+console.log("Transcript Copier Loaded : v2.4.7")
 
 const api = typeof browser!=='undefined'?browser:chrome;
 const sleep = ms=>new Promise(r=>setTimeout(r,ms));
@@ -18,6 +18,7 @@ function showToast(text,d=3000){
 function timeStringToSeconds(str){ if(!str) return 0; const p=str.trim().split(":").map(Number); if(p.length===3)return p[0]*3600+p[1]*60+p[2]; if(p.length===2)return p[0]*60+p[1]; return 0; }
 function secondsToSrtTime(sec){ const h=Math.floor(sec/3600), m=Math.floor((sec%3600)/60), s=Math.floor(sec%60), ms=Math.floor((sec%1)*1000); return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')},${String(ms).padStart(3,'0')}`; }
 function downloadSrt(content, filename){ const blob=new Blob([content],{type:"text/srt"}); const url=URL.createObjectURL(blob); const a=document.createElement("a"); a.href=url; a.download=filename; a.click(); URL.revokeObjectURL(url); }
+function downloadMd(content, filename){ const blob=new Blob([content],{type:"text/markdown"}); const url=URL.createObjectURL(blob); const a=document.createElement("a"); a.href=url; a.download=filename; a.click(); URL.revokeObjectURL(url); }
 
 async function getIncludeTimestampsSetting(){ const r=await api.storage.local.get('includeTimestamps'); return r.includeTimestamps===true; }
 async function getExportFormatSetting(){ const r=await api.storage.local.get('exportFormat'); return r.exportFormat||'txt'; }
@@ -58,6 +59,7 @@ function updateButtonLabel(){
     if(format === 'txt') btn.textContent = 'Yoink Transcript';
     else if(format === 'srt-copy') btn.textContent = 'Yoink SRT (Copy)';
     else if(format === 'srt-download') btn.textContent = 'Yoink SRT (Download)';
+    else if(format === 'obsidian-export') btn.textContent = 'Yoink to Obsidian';
   });
 }
 
@@ -74,6 +76,13 @@ function createButtonElement(){
         const srt = getTranscriptSrt(); if(!srt) throw new Error("Transcript not found");
         if(format === 'srt-copy'){ await navigator.clipboard.writeText(srt); showToast(`Copied SRT`); }
         else{ downloadSrt(srt, `${document.title.replace(/[^\w\d-]/g,'_').slice(0,80)}.srt`); showToast(`Downloaded SRT`); }
+      } else if(format === 'obsidian-export'){
+        const txt = getTranscriptText(withTime); if(!txt) throw new Error("Transcript not found");
+        const md = `---\nsource: ${location.href}\ntitle: "${document.title.replace(/"/g,"'")}"\ndate: ${new Date().toISOString().split('T')[0]}\n---\n\n# ${document.title}\n\nLink: ${location.href}\n\n## Transcript\n\n${txt}\n`;
+        const safeTitle = document.title.replace(/[\\/:*?"<>|]/g,'_').slice(0,80);
+        const obsidianUrl = `obsidian://new?file=${encodeURIComponent(`YouTube/${safeTitle}.md`)}&content=${encodeURIComponent(md)}`;
+        window.open(obsidianUrl);
+        showToast(`Sent to Obsidian`);
       } else {
         const txt = getTranscriptText(withTime); if(!txt) throw new Error("Transcript not found");
         await navigator.clipboard.writeText(txt); showToast(`Copied ${txt.split("\n").length} lines`);
@@ -87,13 +96,8 @@ function createButtonElement(){
 function addYoinkButton(){
   if(!showButtonEnabled){ document.getElementById('yt-yoink-btn')?.remove(); return; }
   if(document.getElementById('yt-yoink-btn')){ updateButtonLabel(); return; }
-
   const target = findInsertTarget();
-  if(!target){
-    console.log("[Yoinker] target not found yet, retrying...");
-    return false;
-  }
-  console.log("[Yoinker] inserting into", target);
+  if(!target){ return false; }
   const btn = createButtonElement();
   target.appendChild(btn);
   updateButtonLabel();
@@ -103,15 +107,12 @@ function addYoinkButton(){
 async function init(){
  const r=await api.storage.local.get('showYTButton');
  showButtonEnabled = r.showYTButton?? true;
- console.log("[Yoinker] showButtonEnabled:", showButtonEnabled);
-
  let tries = 0;
  const interval = setInterval(()=>{
    tries++;
    const ok = addYoinkButton();
    if(ok || tries > 20) clearInterval(interval);
  }, 500);
-
  const obs=new MutationObserver(()=>addYoinkButton());
  obs.observe(document.documentElement,{childList:true,subtree:true});
  window.addEventListener('yt-navigate-finish',()=>{ setTimeout(addYoinkButton,500); setTimeout(addYoinkButton,1500); });
