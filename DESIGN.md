@@ -6,7 +6,7 @@ This is the single source of truth for design. Any AI or human editing this site
 - **Project:** YouTube Transcript Yoinker
 - **Vibe:** Minimal, dark, developer-focused, linear.app / vercel-like, premium but lightweight
 - **Author:** Pawan Hirumina
-- **URL:** https://pawanhirumina.dev/yt-transcript-yoinker/
+- **URL:** https://pawanhirumina.github.io/yt-transcript-yoinker/
 
 ## Core Principles
 1. **Dark only** - No light mode. Everything is #0a0a0a based.
