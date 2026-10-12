@@ -30,9 +30,10 @@ Manually opening YouTube’s transcript panel, selecting all text, and copying i
 | Feature | Description |
 |---------|-------------|
 | **One‑click copy** | A single button copies the entire transcript to the clipboard. |
+| **Multiple export options** | User can select to export the transcript as TXT, SRT or Export to Obsidian. |
 | **Works only when a transcript exists** | The button appears only for videos that actually have a transcript, avoiding dead clicks. |
 | **No external services** | All processing happens locally in the browser—your data never leaves your machine. |
-| **Lightweight** | < 1 MB packed size, minimal impact on page load. |
+| **Lightweight** | < 2 MB packed size, minimal impact on page load. |
 | **Cross‑platform** | Works on any OS that runs Firefox (Windows, macOS, Linux). |
 | **Open‑source** | Fully transparent code on GitHub. |
 
