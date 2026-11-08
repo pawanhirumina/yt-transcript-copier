@@ -2,10 +2,6 @@
 **Version:** v2.4.7  
 
 Copy YouTube video transcripts to your system clipboard with a single click—no account, no external service required.
-
-<a href="https://www.appkade.lk/apps/youtube-transcript-copier">
-  <img src="https://www.appkade.lk/badges/available-on-appkade.svg" alt="Available on AppKade" height="52">
-</a>
 <a href="https://addons.mozilla.org/en-US/firefox/addon/yt-transcript-yoinker/">
   <img src="https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg" alt="Get the Add-on for Firefox" height="52">
 </a>
@@ -14,7 +10,7 @@ Copy YouTube video transcripts to your system clipboard with a single click—no
 
 ## 📖 Overview
 
-YouTube Transcript Yoinker is a lightweight **Firefox web‑extension** that:
+YouTube Transcript Copier is a lightweight **Firefox web‑extension** that:
 
 * Detects if a YouTube video has an automatically generated or user‑provided transcript.  
 * Adds a **“Copy Transcript”** button directly in the YouTube UI.  
@@ -51,7 +47,7 @@ Manually opening YouTube’s transcript panel, selecting all text, and copying i
 
 ### From Mozilla Add‑Ons (recommended)
 
-1. Visit the **[Yoinker extension page on AMO](https://addons.mozilla.org/en-US/firefox/addon/yt-transcript-yoinker/)**.  
+1. Visit the **[Copier extension page on AMO](https://addons.mozilla.org/en-US/firefox/addon/yt-transcript-yoinker/)**.  
 2. Click **“Add to Firefox”** and follow the prompts.  
 3. The extension will be added to your toolbar automatically.
 
@@ -92,7 +88,7 @@ Manually opening YouTube’s transcript panel, selecting all text, and copying i
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you’d like to improve Yoinker:
+Contributions are welcome! If you’d like to improve Copier:
 
 1. Fork the repository.  
 2. Create a new branch (`git checkout -b feature/awesome-feature`).  
