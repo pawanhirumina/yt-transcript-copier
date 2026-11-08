@@ -122,7 +122,7 @@ Feel free to open an issue for bugs, feature requests, or general questions.
 ## 🔗 Useful Links
 
 - **GitHub Repository:** <https://github.com/pawanhirumina/yt-transcript-copier>  
-- **Live Demo / Documentation Site:** <https://pawanhirumina.github.io/yt-transcript-copier/>  
+- **Live Demo / Documentation Site:** <https://yt-transcript-copier.vercel.app/>  
 - **Mozilla Add‑Ons Page:** <https://addons.mozilla.org/en-US/firefox/addon/yt-transcript-yoinker/>  
 
 ---
